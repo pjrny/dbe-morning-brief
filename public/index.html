@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>DBE Morning Brief</title>
+  <link rel="stylesheet" href="/styles.css"/>
+</head>
+<body>
+  <header>
+    <h1>DBE Morning Brief</h1>
+    <nav>
+      <button class="active" data-tab="play">4-Page Life Sim</button>
+      <button data-tab="dbe">DBE Research Field</button>
+    </nav>
+    <div class="row" style="margin:0">
+      <input class="ghost" type="date" id="date"/>
+      <button class="ghost" id="today">Today</button>
+      <span class="meta" id="stamp"></span>
+    </div>
+  </header>
+  <main>
+    <section id="tab-play">
+      <p class="meta">Four 1-pagers from Productivity Game, seeded by date. History = change the date. Win the life-sim if any one page-rule is applied correctly.</p>
+      <div class="cards" id="cards"></div>
+      <div id="sim" class="card">
+        <div class="meta">Text life simulator · KBI</div>
+        <div id="kbi" class="meta"></div>
+        <div class="q" id="question"></div>
+        <div class="choices" id="choices"></div>
+      </div>
+    </section>
+    <section id="tab-dbe" hidden>
+      <section>
+        <h2>Scholar-level articles (support / dispute DBE)</h2>
+        <div class="list" id="scholar"></div>
+      </section>
+      <section>
+        <h2>Communities, labs, industry, GitHub</h2>
+        <div class="list" id="news"></div>
+      </section>
+      <section>
+        <h2>Lectures, OCW, non-scholar explainers</h2>
+        <div class="list" id="learn"></div>
+      </section>
+    </section>
+  </main>
+  <footer>
+    Static Pages + /api/brief Worker. Concepts summarized from attached Productivity Game 1-pagers and DBE / Nature anyon paper. Not a reprint of copyrighted full pages.
+  </footer>
+  <script src="/data.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>
